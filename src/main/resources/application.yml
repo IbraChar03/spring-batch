@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Configurazione JPA
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate.transaction.coordinator_class: jdbc
+      hibernate.transaction.jta.platform: org.hibernate.transaction.JDBCTransactionFactory
+
+  # Configurazione di Spring Batch
+  batch:
+    jdbc:
+      initialize-schema: always  # Questo crea automaticamente le tabelle necessarie di Spring Batch
+    job:
+      enabled: true  # Assicura che Spring Batch sia abilitato
