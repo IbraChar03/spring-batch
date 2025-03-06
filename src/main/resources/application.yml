@@ -15,9 +15,8 @@ spring:
       hibernate.transaction.coordinator_class: jdbc
       hibernate.transaction.jta.platform: org.hibernate.transaction.JDBCTransactionFactory
 
-  # Configurazione di Spring Batch
   batch:
     jdbc:
-      initialize-schema: always  # Questo crea automaticamente le tabelle necessarie di Spring Batch
+      initialize-schema: always
     job:
-      enabled: true  # Assicura che Spring Batch sia abilitato
+      enabled: true

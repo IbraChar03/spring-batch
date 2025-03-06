@@ -24,7 +24,6 @@ import java.net.BindException;
 import java.time.LocalDate;
 
 @Configuration
-@EnableBatchProcessing
 public class BatchConfig {
 
     private final JobRepository jobRepository;
